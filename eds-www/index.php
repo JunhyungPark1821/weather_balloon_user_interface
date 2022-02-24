@@ -15,7 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <head>
         <title>   
-            Blue Horizon Drone Project
+            Blue
         </title>
         <meta http-equiv="refresh" content="10">
         <img src='https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg' 
@@ -24,7 +24,7 @@
     <body>
         <h1> 
         <center>
-            Blue Horizon Drone Project
+            Blue
         </center>
         </h1>
     <p1>
