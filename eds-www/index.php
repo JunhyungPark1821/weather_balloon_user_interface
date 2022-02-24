@@ -29,15 +29,13 @@
         </h1>
     <p1>
         <center>
-        <?php
-            
 
+        <?php
             $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
             $result = $connection->query($query);
 
             while ($row = $result->fetch_assoc()) {
                 
-
                 $id = $row['id']; 
                 $latitude = $row['latitude'];
                 $altitude = $row['altitude'];
@@ -45,8 +43,8 @@
                 $timestamp = $row['timestamp'];
                 
                 # echo "Full Data: " . $timestamp . "<br>";
-                echo "Date: " . substr($timestamp, 0, 10) . "<br>";
-                echo "Time : " . substr($timestamp, 11) . "<br>";
+                echo "Date: " . substr($timestamp, 0, 10) . " / " . "Time : " . substr($timestamp, 11) . "<br>"; 
+                # echo "Time : " . substr($timestamp, 11) . "<br>";
                 echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "<br>";
                 echo " " . "<br>";
             }   
@@ -54,17 +52,7 @@
         ?>
         </center>
     </p1>
-    <p2>
-        <center>
-        <?php   
-        
-            
-            
-        ?>
-        </center>
-        </p2>
-
-
+    
 <?php
 
 
