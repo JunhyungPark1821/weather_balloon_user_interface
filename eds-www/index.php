@@ -28,15 +28,15 @@
         </center>
         </h1>
     <p1>
+        <center>
         <?php
+            
 
-
-            $query = "SELECT * FROM status ORDER BY id DESC LIMIT 1";
+            $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
             $result = $connection->query($query);
 
             while ($row = $result->fetch_assoc()) {
                 
-                echo "ID: " . $row['id'] . " " . "Latitude: ". $row['latitude'] . " " ."Altitude: " . $row['altitude'] . " " . "Longitude: " . $row["longitude"] . " " . $row['timestamp'] . "<br>";
 
                 $id = $row['id']; 
                 $latitude = $row['latitude'];
@@ -44,17 +44,19 @@
                 $longitude = $row["longitude"];
                 $timestamp = $row['timestamp'];
 
+                echo "Full Data: " . $timestamp . "<br>";
+                echo "Date: " . substr($timestamp, 0, 10) . "<br>";
+                echo "Time : " . substr($timestamp, 11) . "<br>";
             }
             $connection->close();
         ?>
+        </center>
     </p1>
     <p2>
         <center>
         <?php   
         
-            echo "Full Data: " . $timestamp . "<br>";
-            echo "Date: " . substr($timestamp, 0, 10) . "<br>";
-            echo "Time : " . substr($timestamp, 11);
+            
             
         ?>
         </center>
