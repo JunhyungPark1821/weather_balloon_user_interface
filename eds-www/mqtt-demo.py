@@ -12,10 +12,10 @@ MQTT_BROKER = "nam1.cloud.thethings.network"
 
 # User Credentials
 USERNAME = "new-new-application@ttn"
-PASSWORD = "NNSXS.W4MZ34FMOLYKFTPMINB6HWZIQ4JZ7RQJIAXJWDI.PDJHO5V2MCPEAKY2C7XRKD35KRTZCW2EZZPTXEZWXKGXOVHJHW3A"
+PASSWORD = "NNSXS.AIIT6WQ6EZ7W3ITR5D4X4564OGNPLEHW342DETY.5JVISXTO77WYZ5XXAFEKURHBJL5AV55KHREI7YJLNVYPWL5BZULQ"
 
 # This is a list of channels that you want to subscribe to
-MQTT_TOPICS = ["v3/new-park-featherboard@ttn/devices/eui-70b3d57ed004c90c/up"]
+MQTT_TOPICS = ["v3/new-new-application@ttn/devices/eui-70b3d57ed004ce0a/up"]
 
 
 # -------------------------------------------------------
