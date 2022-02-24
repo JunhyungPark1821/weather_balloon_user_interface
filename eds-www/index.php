@@ -42,17 +42,22 @@
                 $latitude = $row['latitude'];
                 $altitude = $row['altitude'];
                 $longitude = $row["longitude"];
+                $timestamp = $row['timestamp'];
 
             }
-
-
             $connection->close();
         ?>
     </p1>
     <p2>
+        <center>
         <?php   
-            echo $id;
+        
+            echo "Full Data: " . $timestamp . "<br>";
+            echo "Date: " . substr($timestamp, 0, 10) . "<br>";
+            echo "Time : " . substr($timestamp, 11);
+            
         ?>
+        </center>
         </p2>
 
 
