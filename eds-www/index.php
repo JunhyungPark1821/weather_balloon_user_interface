@@ -15,7 +15,7 @@
     <link href="style.css" rel="stylesheet">
     <head>
         <title>   
-            Blue
+            Blue Horizon Weather Balloon Project
         </title>
         <meta http-equiv="refresh" content="10">
         <img src='https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg' 
@@ -24,7 +24,7 @@
     <body>
         <h1> 
         <center>
-            Blue
+            Blue Horizon Weather Balloon Project
         </center>
         </h1>
     <p1>
@@ -43,11 +43,13 @@
                 $altitude = $row['altitude'];
                 $longitude = $row["longitude"];
                 $timestamp = $row['timestamp'];
-
-                echo "Full Data: " . $timestamp . "<br>";
+                
+                # echo "Full Data: " . $timestamp . "<br>";
                 echo "Date: " . substr($timestamp, 0, 10) . "<br>";
                 echo "Time : " . substr($timestamp, 11) . "<br>";
-            }
+                echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "<br>";
+                echo " " . "<br>";
+            }   
             $connection->close();
         ?>
         </center>
