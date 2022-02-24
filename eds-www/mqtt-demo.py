@@ -66,7 +66,7 @@ def on_message(client, userdata, msg):
         print("Latitude:", latitude)
         print("Longitude:", longitude)
         
-        dblib.upload_data(float(latitude.split(" ")[0]), float(latitude.split(" ")[0]), float(longitude.split(" ")[0]))
+        dblib.upload_data(float(latitude.split(" ")[0]), float(longitude.split(" ")[0]), float(altitude.split(" ")[0]))
     
     except:
         # If something break, just do nothing
