@@ -1,0 +1,14 @@
+body {
+    background-image: url("https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    
+    background-attachment: fixed;
+    background-size: 206px 200px;
+  }
+.data {
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 50px;
+    color:rgb(0, 0, 0);
+}

@@ -14,6 +14,7 @@
 <html>
     <link href="style.css" rel="stylesheet">
     <head>
+    <link rel="stylesheet" href="Style.css">
         <title>   
             Blue Horizon Weather Balloon Project
         </title>
@@ -27,31 +28,39 @@
             Blue Horizon Weather Balloon Project
         </center>
         </h1>
-    <p1>
-        <center>
 
-        <?php
-            $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
-            $result = $connection->query($query);
+       
+    <div class="data">
+        <p1>
 
-            while ($row = $result->fetch_assoc()) {
-                
-                $id = $row['id']; 
-                $latitude = $row['latitude'];
-                $altitude = $row['altitude'];
-                $longitude = $row["longitude"];
-                $timestamp = $row['timestamp'];
-                
-                # echo "Full Data: " . $timestamp . "<br>";
-                echo "Date: " . substr($timestamp, 0, 10) . " / " . "Time : " . substr($timestamp, 11) . "<br>"; 
-                # echo "Time : " . substr($timestamp, 11) . "<br>";
-                echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "<br>";
-                echo " " . "<br>";
-            }   
-            $connection->close();
-        ?>
-        </center>
-    </p1>
+            <?php
+                $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
+                $result = $connection->query($query);
+
+                while ($row = $result->fetch_assoc()) {
+                    
+                    $id = $row['id']; 
+                    $latitude = $row['latitude'];
+                    $altitude = $row['altitude'];
+                    $longitude = $row["longitude"];
+                    $timestamp = $row['timestamp'];
+                    
+                    # echo "Full Data: " . $timestamp . "<br>";
+                    echo "Date: " . substr($timestamp, 0, 10) . " / " . "Time : " . substr($timestamp, 11) . "<br>"; 
+                    # echo "Time : " . substr($timestamp, 11) . "<br>";
+                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "<br>";
+                    echo " " . "<br>";
+                }   
+                $connection->close();
+            ?>
+        <h2>
+            <?php
+                substr($timestamp, 0, 10)
+            ?>
+        </h2>
+           
+        </p1>
+            </div>
     
 <?php
 
