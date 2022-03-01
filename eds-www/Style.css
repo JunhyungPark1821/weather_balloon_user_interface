@@ -34,8 +34,7 @@ body {
   background-attachment: fixed;
   background-size: 206px 200px;
 }
-.images{
-  position: relative;
+.image{
   top: 0;  
   left: 0;
 }

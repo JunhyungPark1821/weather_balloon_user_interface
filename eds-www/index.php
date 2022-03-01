@@ -29,7 +29,7 @@
         <title>   
             Blue Horizon Weather Balloon Project
         </title>
-        <!--<meta http-equiv="refresh" content="10"> -->
+        <meta http-equiv="refresh" content="10">
         
         </head>
         
@@ -37,7 +37,8 @@
             <div class="image">
                 <image src="https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg" 
                     Alt="" height="200" width="200" Align="left"/>
-</div>  
+        </div>  
+        
             <h1>
                 Blue Horizon Weather Balloon Project
             </h1>
