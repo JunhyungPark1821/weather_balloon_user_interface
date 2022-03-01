@@ -1,3 +1,7 @@
+
+    <!-- Connect to Database
+        Find most recent date and save it -->
+
 <?php
     $username = "root";
     $password = "";
@@ -23,7 +27,7 @@
         $temperature = $row['temp'];
     }
 ?>
-
+    <!-- Setting Title and Refresh Rate -->
 <html>
     <head>
     <link rel="stylesheet" href="Style.css">
@@ -32,21 +36,22 @@
         </title>
         <meta http-equiv="refresh" content="10">
         
-        </head>
-        
-        <div class="header">
-            <div class="image">
-                <image src="https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg" 
-                    Alt="" height="200" width="200" Align="left"/>
+    </head>
+    <!-- Header Code -->
+    <div class="header">
+        <div class="image">
+            <image src="https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg" 
+                Alt="" height="200" width="200" Align="left"/>
         </div>  
         
-            <h1>
-                Blue Horizon Weather Balloon Project
-            </h1>
+        <h1>
+            Blue Horizon Weather Balloon Project
+        </h1>
            
-        </div>
+    </div>
 
         
+    <!-- Most Recent Date Display -->
 
     <body>
        
@@ -58,7 +63,8 @@
             
         </h2>
 
-       
+    <!-- Data display and concat. -->
+
     <div class="data">
         <p1>
 
@@ -86,28 +92,10 @@
             ?>
            
         </p1>
+
     </div>
     
-<?php
 
-
-
-
-    // // Get the filename from the URL
-    // $filename = $_GET["filename"];
-
-    // // Read the JSON file 
-    // $json = file_get_contents($filename);
-    
-    // // Decode the JSON file
-    // $json_data = json_decode($json,true);
-    
-    // Display data
-    //print_r($json_data);
-
-    //echo "<b>" . $json_data["glossary"]["title"] . "</b>";
-
-?>
     </body>
 
 </html>
