@@ -20,6 +20,7 @@
         $altitude = $row['altitude'];
         $longitude = $row["longitude"];
         $timestamp = $row['timestamp'];
+        $temperature = $row['temp'];
     }
 ?>
 
@@ -72,12 +73,14 @@
                     $altitude = $row['altitude'];
                     $longitude = $row["longitude"];
                     $timestamp = $row['timestamp'];
+                    $temperature = $row['temp'];
+
                     
                     # echo "Full Data: " . $timestamp . "<br>";
                     echo "Time : " . substr($timestamp, 11) . "<br>"; 
                     # echo "Time : " . substr($timestamp, 11) . "<br>";
-                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "<br>";
-                    echo "-----------------------------------------------" . "<br>";
+                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature (Deg. C): " . $temperature . "<br>";
+                    echo "------------------------------------------------------------------------" . "<br>";
                 }   
                 $connection->close();
             ?>
