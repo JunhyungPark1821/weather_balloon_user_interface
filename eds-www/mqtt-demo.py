@@ -53,20 +53,23 @@ def on_message(client, userdata, msg):
         altitude = jsonData['uplink_message']['decoded_payload']['altitude']
         latitude = jsonData['uplink_message']['decoded_payload']['latitude']
         longitude = jsonData['uplink_message']['decoded_payload']['longitude']
+        temperature = jsonData['uplink_message']['decoded_payload']['temperature']
 
         with open(r"C:\Users\junhyung\Desktop\Location_Data.txt",'a') as locationData:
             locationData.write("Time: " + time + "\n")
             locationData.write("Altitude: " + altitude + "\n")
             locationData.write("Latitude: " + latitude + "\n")
             locationData.write("Longitude: " + longitude + "\n")
+            locationData.write("Temperature: " + temperature + "\n")
             locationData.write("\n")
         
         print("Time:", time)
         print("Altitude:", altitude)
         print("Latitude:", latitude)
         print("Longitude:", longitude)
+        print("Temperature:", temperature)
         
-        dblib.upload_data(float(latitude.split(" ")[0]), float(longitude.split(" ")[0]), float(altitude.split(" ")[0]))
+        dblib.upload_data(float(latitude.split(" ")[0]), float(longitude.split(" ")[0]), float(altitude.split(" ")[0]), float(temperature.split(" ")[0]))
     
     except:
         # If something break, just do nothing
