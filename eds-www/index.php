@@ -82,7 +82,7 @@
                     # echo "Full Data: " . $timestamp . "<br>";
                     echo "Time : " . substr($timestamp, 11) . "<br>"; 
                     # echo "Time : " . substr($timestamp, 11) . "<br>";
-                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . "Temperature: " . $temperature . "<br>";
+                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature: " . $temperature . "<br>";
                     echo "------------------------------------------------------------------------------" . "<br>";
                 }   
                 $connection->close();
