@@ -29,33 +29,38 @@
         <title>   
             Blue Horizon Weather Balloon Project
         </title>
-        <meta http-equiv="refresh" content="10">
+        <!-- <meta http-equiv="refresh" content="10"> -->
         
-        </head>
+    </head>
         
-        <div class="header">
-            <div class="image">
-                <image src="https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg" 
-                    Alt="" height="200" width="200" Align="left"/>
+    <div class="header">
+        <div class="image">
+            <image src="https://militaryartsconnection.org/wp-content/uploads/2020/01/USAFA-logo.jpg" 
+                Alt="" height="200" width="200" Align="left"/>
         </div>  
+    
+        <h1>
+            Blue Horizon Weather Balloon Project
+        </h1>
         
-            <h1>
-                Blue Horizon Weather Balloon Project
-            </h1>
-           
-        </div>
+    </div>
 
+    
+    <div class="recent">
         
+        <h2>    
+            <?php
+                echo "Date: " . substr($timestamp, 0, 10);
+            ?>
+        </h2>   
+        
+    </div>
+
+
+
 
     <body>
        
-        <h2 class="date">
-            
-            <?php
-                echo "Date: " . substr($timestamp, 0, 10) . "<br>";
-            ?>
-            
-        </h2>
 
        
     <div class="data">
