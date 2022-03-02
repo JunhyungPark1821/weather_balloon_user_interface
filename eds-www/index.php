@@ -10,7 +10,7 @@
         die("Connection Failure" . $connection->connect_error);
     }
 
-    $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
+    $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 1";
     $result = $connection->query($query);
 
     while ($row = $result->fetch_assoc()) {
