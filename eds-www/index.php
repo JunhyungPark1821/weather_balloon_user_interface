@@ -20,6 +20,7 @@
         $altitude = $row['altitude'];
         $longitude = $row["longitude"];
         $timestamp = $row['timestamp'];
+        $temperature = $row['temp'];
     }
 ?>
 
@@ -45,12 +46,24 @@
         
     </div>
 
-    
-    <div class="recent">
-        
-        <h2>    
+    <div class='date'>
+
+        <h1>    
             <?php
                 echo "Date: " . substr($timestamp, 0, 10);
+            ?>
+        </h1>   
+
+    </div> 
+
+    
+    <div class="recent">
+        <h1>
+            Most Recent Data
+        </h1>
+        <h2 class="recentData">    
+            <?php
+                echo "Altitude: " . $altitude . "   " . "Latitude: " . $latitude . "   " . "longitude: " . $longitude . "   " . "Temperature (Deg. C): " . $temperature . "<br>"; 
             ?>
         </h2>   
         

@@ -11,7 +11,8 @@
     margin-top: 50px;
     margin-right: 150px;
     margin-left: 50px;
-    padding-right: 100px;
+    padding-left: 100px;
+    text-align: center;
 }
 
 .header {
@@ -37,10 +38,11 @@ body {
 .recent {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 100px;
   margin-right: 100px;
   font-size: 15px;
   border-bottom-style: dotted;
-  
-  
+}
+
+.recentData{
+  margin-left: 50px;
 }
