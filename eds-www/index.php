@@ -61,22 +61,32 @@
         <h1>
             Most Recent Data
         </h1>
-        <h2 class="recentData">    
-            <?php
-                echo "Altitude: " . $altitude . "   " . "Latitude: " . $latitude . "   " . "longitude: " . $longitude . "   " . "Temperature (Deg. C): " . $temperature . "<br>"; 
-            ?>
-        </h2>   
+
+
+        <div class="recentData">  
+            <h2>
+                Altitude     Latitude       Longitude     Temperature (Deg C)
+            </h2>
+            <h2>
+                <?php
+                    echo $altitude . " " . $latitude . "   " . $longitude . "   " . $temperature . "<br>"; 
+                ?>
+            </h2>
+        </div>   
         
     </div>
 
 
-
+    <div class="PrevDataHeading">
+        <h1 >
+            Previous Data
+        </h1>
+    </div>
 
     <body>
-       
-
-       
     <div class="data">
+
+        
         <p1>
 
             <?php
