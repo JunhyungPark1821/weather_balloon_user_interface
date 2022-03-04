@@ -1,4 +1,7 @@
 <?php
+
+    $months = array('January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 
+                    'August', 'September', 'October', 'November', 'December');
     $username = "root";
     $password = "";
     $server   = "localhost";
@@ -22,6 +25,14 @@
         $timestamp = $row['timestamp'];
         $temperature = $row['temp'];
     }
+
+    if((int)(substr($timestamp, 6, 1)) > 9) {
+        $monthNumber = (int)(substr($timestamp, 5, 2));
+    }
+    else{
+        $monthNumber = (int)(substr($timestamp, 6, 2));
+    }
+
 ?>
 
 <html>
@@ -50,7 +61,7 @@
 
         <h1>    
             <?php
-                echo "Date: " . substr($timestamp, 0, 10);
+                echo $months[$monthNumber - 1] . " " . substr($timestamp, 8, 2) . " " . substr($timestamp, 0, 4);
             ?>
         </h1>   
 
@@ -59,13 +70,14 @@
     
     <div class="recent">
         <h1>
-            Most Recent Data
+            <?php
+                echo "Most Recent Data ( " . substr($timestamp, 11) . " )"; 
+            ?>
         </h1>
 
 
         <div class="recentData">  
-            <h2>
-                Altitude     Latitude       Longitude     Temperature (Deg C)
+            <h2>                Altitude     Latitude       Longitude     Temperature (Deg C)
             </h2>
             <h2>
                 <?php
