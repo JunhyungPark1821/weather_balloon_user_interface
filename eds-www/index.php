@@ -37,6 +37,7 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <link rel="stylesheet" href="Style.css">
         <title>   
             Blue Horizon Weather Balloon Project
