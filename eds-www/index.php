@@ -77,11 +77,13 @@
 
 
         <div class="recentData">  
-            <h2>                Altitude     Latitude       Longitude     Temperature (Deg C)
+            <h2> 
+                  Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
             </h2>
+
             <h2>
                 <?php
-                    echo $altitude . " " . $latitude . "   " . $longitude . "   " . $temperature . "<br>"; 
+                    echo "&emsp;&ensp;" . $altitude . "&ensp;&emsp;&emsp;&emsp;&emsp;" . $latitude . "&emsp;&emsp;&emsp;&emsp;&emsp;" . $longitude . "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;" . $temperature . "<br>"; 
                 ?>
             </h2>
         </div>   
@@ -93,7 +95,7 @@
         <h1 >
             Previous Data
         </h1>
-    </div>
+    
 
     <body>
     <div class="data">
@@ -124,6 +126,7 @@
             ?>
            
         </p1>
+    </div>
     </div>
     
 <?php
