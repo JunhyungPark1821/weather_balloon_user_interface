@@ -79,12 +79,12 @@
 
         <div class="recentData">  
             <h2> 
-                &emsp;&emsp;&emsp;Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
+                Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
             </h2>
 
             <h2>
                 <?php
-                    echo "&emsp;&emsp;&emsp;&emsp;&ensp;" . $altitude . "&ensp;&emsp;&emsp;&emsp;&emsp;" . $latitude . "&emsp;&emsp;&emsp;&emsp;&emsp;" . $longitude . "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;" . $temperature . "<br>"; 
+                    echo "&ensp;&ensp;&ensp;" . $altitude . "&ensp;&emsp;&emsp;&emsp;&emsp;" . $latitude . "&emsp;&emsp;&emsp;&emsp;&emsp;" . $longitude . "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;" . $temperature . "<br>"; 
                 ?>
             </h2>
         </div>   
