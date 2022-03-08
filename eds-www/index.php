@@ -79,7 +79,7 @@
 
         <div class="recentData">  
             <h2> 
-                Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
+                Altitude  &emsp; Latitude  &emsp; Longitude  &emsp; Temperature (Deg C)
             </h2>
 
             <h2>
@@ -98,36 +98,33 @@
         </h1>
     
 
-    <body>
-    <div class="data">
+        <body>
+        <div class="data">
+            <p1>
+                <?php
+                    $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
+                    $result = $connection->query($query);
 
-        
-        <p1>
+                    while ($row = $result->fetch_assoc()) {
+                        
+                        $id = $row['id']; 
+                        $latitude = $row['latitude'];
+                        $altitude = $row['altitude'];
+                        $longitude = $row["longitude"];
+                        $timestamp = $row['timestamp'];
+                        $temperature = $row['temp'];
 
-            <?php
-                $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
-                $result = $connection->query($query);
-
-                while ($row = $result->fetch_assoc()) {
-                    
-                    $id = $row['id']; 
-                    $latitude = $row['latitude'];
-                    $altitude = $row['altitude'];
-                    $longitude = $row["longitude"];
-                    $timestamp = $row['timestamp'];
-                    $temperature = $row['temp'];
-
-                    # echo "Full Data: " . $timestamp . "<br>";
-                    echo "Time : " . substr($timestamp, 11) . "<br>"; 
-                    # echo "Time : " . substr($timestamp, 11) . "<br>";
-                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature (Deg. C): " . $temperature . "<br>";
-                    echo "------------------------------------------------------------------------------" . "<br>";
-                }   
-                $connection->close();
-            ?>
-           
-        </p1>
-    </div>
+                        # echo "Full Data: " . $timestamp . "<br>";
+                        echo "Time : " . substr($timestamp, 11) . "<br>"; 
+                        # echo "Time : " . substr($timestamp, 11) . "<br>";
+                        echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature (Deg. C): " . $temperature . "<br>";
+                        echo "------------------------------------------------------------------------------" . "<br>";
+                    }   
+                    $connection->close();
+                ?>
+            
+            </p1>
+        </div>
     </div>
     
 <?php

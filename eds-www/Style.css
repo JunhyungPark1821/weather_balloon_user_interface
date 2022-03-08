@@ -47,8 +47,8 @@ body {
 }
 
 .recentData{
-  margin-left: 50px;
-  margin-right: 450px;
+
+  
   border: 4px solid;
   border-radius: 12px;
 }
@@ -62,5 +62,6 @@ body {
 }
 
 .recentData h2{
-  margin-left: 50px;
+  padding-left: 342.5px;
+  padding-right: 322.5px;
 }
