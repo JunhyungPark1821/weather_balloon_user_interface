@@ -3,6 +3,9 @@
         Find most recent date and save it -->
 
 <?php
+
+    $months = array('January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 
+                    'August', 'September', 'October', 'November', 'December');
     $username = "root";
     $password = "";
     $server   = "localhost";
@@ -26,10 +29,19 @@
         $timestamp = $row['timestamp'];
         $temperature = $row['temp'];
     }
+
+    if((int)(substr($timestamp, 6, 1)) > 9) {
+        $monthNumber = (int)(substr($timestamp, 5, 2));
+    }
+    else{
+        $monthNumber = (int)(substr($timestamp, 6, 2));
+    }
+
 ?>
     <!-- Setting Title and Refresh Rate -->
 <html>
     <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
     <link rel="stylesheet" href="Style.css">
         <title>   
             Blue Horizon Weather Balloon Project
@@ -50,52 +62,79 @@
            
     </div>
 
+    <div class='date'>
+
+        <h1>    
+            <?php
+                echo $months[$monthNumber - 1] . " " . substr($timestamp, 8, 2) . " " . substr($timestamp, 0, 4);
+            ?>
+        </h1>   
+
+    </div> 
+
+    
+    <div class="recent">
+        <h1>
+            <?php
+                echo "Most Recent Data ( " . substr($timestamp, 11) . " )"; 
+            ?>
+        </h1>
+
+
+        <div class="recentData">  
+            <h2> 
+                &emsp;&emsp;&emsp;Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
+            </h2>
+
+            <h2>
+                <?php
+                    echo "&emsp;&emsp;&emsp;&emsp;&ensp;" . $altitude . "&ensp;&emsp;&emsp;&emsp;&emsp;" . $latitude . "&emsp;&emsp;&emsp;&emsp;&emsp;" . $longitude . "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;" . $temperature . "<br>"; 
+                ?>
+            </h2>
+        </div>   
         
-    <!-- Most Recent Date Display -->
-
-    <body>
-       
-        <h2 class="date">
-            
-            <?php
-                echo "Date: " . substr($timestamp, 0, 10) . "<br>";
-            ?>
-            
-        </h2>
-
-    <!-- Data display and concat. -->
-
-    <div class="data">
-        <p1>
-
-            <?php
-                $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
-                $result = $connection->query($query);
-
-                while ($row = $result->fetch_assoc()) {
-                    
-                    $id = $row['id']; 
-                    $latitude = $row['latitude'];
-                    $altitude = $row['altitude'];
-                    $longitude = $row["longitude"];
-                    $timestamp = $row['timestamp'];
-                    $temperature = $row['temp'];
-
-                    
-                    # echo "Full Data: " . $timestamp . "<br>";
-                    echo "Time : " . substr($timestamp, 11) . "<br>"; 
-                    # echo "Time : " . substr($timestamp, 11) . "<br>";
-                    echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature (Deg. C): " . $temperature . "<br>";
-                    echo "------------------------------------------------------------------------" . "<br>";
-                }   
-                $connection->close();
-            ?>
-           
-        </p1>
-
     </div>
+
+
+    <div class="PrevDataHeading">
+        <h1 >
+            Previous Data
+        </h1>
     
 
-    </body>
+        <body>
+            <div class="data">
+
+            
+                <p1>
+
+                    <?php
+                        $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
+                        $result = $connection->query($query);
+
+                        while ($row = $result->fetch_assoc()) {
+                        
+                        $id = $row['id']; 
+                        $latitude = $row['latitude'];
+                        $altitude = $row['altitude'];
+                        $longitude = $row["longitude"];
+                        $timestamp = $row['timestamp'];
+                        $temperature = $row['temp'];
+
+                        
+                        # echo "Full Data: " . $timestamp . "<br>";
+                        echo "Time : " . substr($timestamp, 11) . "<br>"; 
+                        # echo "Time : " . substr($timestamp, 11) . "<br>";
+                        echo "Altitude: " . $altitude . " " . "Latitude: " . $latitude . " " . "longitude: " . $longitude . " " . "Temperature (Deg. C): " . $temperature . "<br>";
+                        echo "------------------------------------------------------------------------------" . "<br>";
+                    }   
+                    $connection->close();
+                    ?>
+                </p1>
+            </div>
+        </body>
+    </div>
+    
+    
 
 </html>
