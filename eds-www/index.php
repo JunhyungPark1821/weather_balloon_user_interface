@@ -83,7 +83,7 @@
 
         <div class="recentData">  
             <h2> 
-                Altitude  &emsp; Latitude  &emsp;   Longitude  &emsp; Temperature (Deg C)
+                Altitude  &emsp; Latitude  &emsp; Longitude  &emsp; Temperature (Deg C)
             </h2>
 
             <h2>
@@ -103,16 +103,13 @@
     
 
         <body>
-            <div class="data">
+        <div class="data">
+            <p1>
+                <?php
+                    $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
+                    $result = $connection->query($query);
 
-            
-                <p1>
-
-                    <?php
-                        $query = "SELECT * FROM status ORDER BY timestamp DESC LIMIT 10";
-                        $result = $connection->query($query);
-
-                        while ($row = $result->fetch_assoc()) {
+                    while ($row = $result->fetch_assoc()) {
                         
                         $id = $row['id']; 
                         $latitude = $row['latitude'];
@@ -121,7 +118,6 @@
                         $timestamp = $row['timestamp'];
                         $temperature = $row['temp'];
 
-                        
                         # echo "Full Data: " . $timestamp . "<br>";
                         echo "Time : " . substr($timestamp, 11) . "<br>"; 
                         # echo "Time : " . substr($timestamp, 11) . "<br>";
@@ -129,10 +125,10 @@
                         echo "------------------------------------------------------------------------------" . "<br>";
                     }   
                     $connection->close();
-                    ?>
-                </p1>
-            </div>
-        </body>
+                ?>
+            
+            </p1>
+        </div>
     </div>
     
     
