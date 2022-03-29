@@ -68,6 +68,7 @@
             <?php
                 echo $months[$monthNumber - 1] . " " . substr($timestamp, 8, 2) . " " . substr($timestamp, 0, 4);
             ?>
+            
         </h1>   
 
     </div> 
