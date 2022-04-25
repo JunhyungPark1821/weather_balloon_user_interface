@@ -34,10 +34,6 @@
 </ul>
 
 <h2 id="subtitle" style="margin-top:2em">
-    Wiring Diagram
-</h2>
-
-<h2 id="subtitle" style="margin-top:2em">
     Data Collection
 </h2>
 
@@ -47,6 +43,10 @@
     <li>Altitude</li>
     <li>Temperature</li>
 </ul>
+
+<h2 id="subtitle" style="margin-top:2em">
+    Wiring Diagram
+</h2>
 
 <h2 id="subtitle" style="margin-top:2em">
     Setting Up the Gateway and The Things Network
@@ -60,14 +60,18 @@
         <a href="Add_Tektelic_gateway_to_TTN_Park.pdf">How to Add Tektelic Gateway to The Things Network</a>
     </li>
     <li> 
-        <a href="Add_application_to_TTN_and_end_device_Park.pdf">How togit Add Application and End Device to The Things Network</a>
+        <a href="Add_application_and_end_device_to_TTN_Park.pdf">How to Add Application and End Device to The Things Network</a>
     </li>
 </ul>
 
 <h2 id="subtitle" style="margin-top:2em">
-    Feather M0 with RFM95 LoRa Radio
+    Aseembly and Programming
 </h2>
 
 <div>
-    
+     Assembly and wiring of the Feather M0 were based on  <a href="https://learn.adafruit.com/adafruit-feather-m0-radio-with-lora-radio-module/assembly">Adafruit Feather M0 Radio with LoRa Radio Module Tutorial</a>. The GPS and and temperature sensors are wired to the Feather M0 for collecting data. The temperature sensor was set up following <a href="https://randomnerdtutorials.com/guide-for-ds18b20-temperature-sensor-with-arduino/"> Guide for DS18B20 Temperature Sensor with Arduino</a>. The GPS  The data transmission programming was based on <a href="https://github.com/oktavianabd/arduino-lmic"> Arduino-LMIC library documentation </a> and the example sketches provided from the library.
+</div>
+
+<div style="margin-top:1em">
+    a
 </div>
